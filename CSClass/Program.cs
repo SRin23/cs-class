@@ -44,6 +44,16 @@ namespace CSClass
             {
                 Console.WriteLine("Count : " + list.Count + "\t item: " + item);
             }
+
+            Console.WriteLine(Math.Abs(-52273));
+            Console.WriteLine(Math.Ceiling(52.273));    //53
+            Console.WriteLine(Math.Floor(52.273));    //52
+            Console.WriteLine(Math.Max(52, 273));    //273
+            Console.WriteLine(Math.Min(52, 273));    //52
+            Console.WriteLine(Math.Round(52.273));    //52
+            Console.WriteLine(Math.PI);
+
+
         }
     }
 }
