@@ -27,8 +27,8 @@ namespace CSClass
             Console.WriteLine(random.Next(10, 100));
 
             Console.WriteLine(random.NextDouble());
-            Console.WriteLine(random.NextDouble()*10);
-            
+            Console.WriteLine(random.NextDouble() * 10);
+
             /*
             List<int> list = new List<int>();
             
@@ -66,6 +66,71 @@ namespace CSClass
             Product productD = new Product() { name = "보름달" };
             Product productE = new Product() { price = 30000 };
 
+            //집합일 경우 변수를 복수형으로 작성하는 것이 좋다
+            /* 
+                       List<Student> students = new List<Student>();
+                       students.Add(new Student() { name = "김세린", grade = 3 });
+                       students.Add(new Student() { name = "김다흰", grade = 2 });
+                       students.Add(new Student() { name = "김미나", grade = 3 });
+                       students.Add(new Student() { name = "김민정", grade = 1 });
+                       students.Add(new Student() { name = "김소연", grade = 1 });
+                       students.Add(new Student() { name = "김지수", grade = 2 });
+                       students.Add(new Student() { name = "김지호", grade = 3 });
+                       students.Add(new Student() { name = "김찬희", grade = 1 });
+                       students.Add(new Student() { name = "김하늘", grade = 2 });
+                       students.Add(new Student() { name = "김효리", grade = 1 });
+            */
+
+            List<Student> students = new List<Student>()
+            {
+                new Student() { name = "김세린", grade = 3 }, 
+                new Student() { name = "김다흰", grade = 2 }, 
+                new Student() { name = "김미나", grade = 3 }, 
+                new Student() { name = "김민정", grade = 1 }, 
+                new Student() { name = "김소연", grade = 1 }, 
+                new Student() { name = "김지수", grade = 3 }, 
+                new Student() { name = "김지호", grade = 3 }, 
+                new Student() { name = "김찬희", grade = 1 }, 
+                new Student() { name = "김하늘", grade = 2 }, 
+                new Student() { name = "김효리", grade = 1 },
+            };
+
+            //foreach는 삭제할때는 잘 사용하지 않는다.
+            /*          foreach (var item in students)
+                      {
+                          if (item.grade > 2)
+                          {
+                              Console.WriteLine(item);
+                              //students.Remove(item);    //삭제되며 객체가 앞으로 오게 되어 index에 문제가 생겨 error를 반환함
+                          }
+                          //Console.WriteLine(item);
+                      }
+            */
+
+            //spanner : 속성을 일컫는다.
+            //네모난 상자 : 필드를 일컫는다.
+/*            for (int i = 0; i < students.Count; i++)
+            {
+                if (students[i].grade > 2)
+                {
+                    students.RemoveAt(i);   //김지호에서 grade가 연속적으로 나와 3이 출력되게 된다. (index에 의해) -> 이를 해결하기 위해 뒤에서부터 반복문 실행
+                    //students.Remove(students[i]);
+                    i--;
+                }
+            }
+*/
+            for(int i = students.Count - 1; i >= 0; i--)
+            {
+                if (students[i].grade > 2)
+                {
+                    students.RemoveAt(i);
+                }
+            }
+
+            foreach(var item in students)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
