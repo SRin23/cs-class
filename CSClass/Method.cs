@@ -41,5 +41,12 @@ namespace CSClass
             }
             return output;
         }
+
+        //클래스 메서드는 객체 생선 전에도 호출할 수 있다
+        static public void some()
+        {
+            //this.Multiplay(1, 10);  //클래스 메서드 내에서 해당 객체의 인스턴스에 접근할 수 없다.
+
+        }
     }
 }
