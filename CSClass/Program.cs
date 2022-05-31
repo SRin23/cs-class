@@ -131,6 +131,9 @@ namespace CSClass
             {
                 Console.WriteLine(item);
             }
+
+            Method method = new Method();
+            Console.WriteLine("곱하기 : " + method.Multi(52.1, 273));
         }
     }
 }
