@@ -134,6 +134,9 @@ namespace CSClass
 
             Method method = new Method();
             Console.WriteLine("곱하기 : " + method.Multi(52.1, 273));
+
+            Console.WriteLine(method.Sum(1, 100));
+            Console.WriteLine(method.Multiply(1, 100)); //Overflow로 인해 0이 출력됨
         }
     }
 }
