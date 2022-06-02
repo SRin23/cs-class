@@ -166,13 +166,13 @@ namespace CSClass
 
             //ver2
             //일반 생성자보다 정적 생성자가 먼저 호출됨
-            /*
-                        Console.WriteLine("첫번째 위치");
-                        Sample sample = new Sample();
-                        Console.WriteLine("두번째 위치");
-                        Console.WriteLine(Sample.value);
-                        Console.WriteLine("세번째 위치");
-            */
+
+            Console.WriteLine("첫번째 위치");
+            Sample sample = new Sample();
+            Console.WriteLine("두번째 위치");
+            Console.WriteLine(Sample.value);
+            Console.WriteLine("세번째 위치");
+
 
         }
     }
