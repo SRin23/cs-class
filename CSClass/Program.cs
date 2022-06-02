@@ -137,6 +137,19 @@ namespace CSClass
 
             Console.WriteLine(method.Sum(1, 100));
             Console.WriteLine(method.Multiply(1, 100)); //Overflow로 인해 0이 출력됨
+
+            //Method Overloading
+            //int
+            Console.WriteLine(MyMath.Abs(52));
+            Console.WriteLine(MyMath.Abs(-52));
+
+            //double
+            Console.WriteLine(MyMath.Abs(52.273));
+            Console.WriteLine(MyMath.Abs(-52.273));
+
+            //long
+            Console.WriteLine(MyMath.Abs(987654321123456));
+            Console.WriteLine(MyMath.Abs(987654321123456));
         }
     }
 }
