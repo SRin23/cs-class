@@ -137,6 +137,8 @@ namespace CSClass
 
             Console.WriteLine(method.Sum(1, 100));
             Console.WriteLine(method.Multiply(1, 100)); //Overflow로 인해 0이 출력됨
+            Console.WriteLine(Method.Abs(-100));
+            Console.WriteLine(Method.Abs(100));
 
             //Method Overloading
             //int

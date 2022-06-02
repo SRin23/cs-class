@@ -4,6 +4,8 @@ namespace CSClass
 {
     public class Method
     {
+        int instanceVariable = 10;
+        static int classVariable = 10;
         public double Multi(double v1, int v2)
         {
             return v1 * v2;
@@ -46,7 +48,20 @@ namespace CSClass
         static public void some()
         {
             //this.Multiplay(1, 10);  //클래스 메서드 내에서 해당 객체의 인스턴스에 접근할 수 없다.
+            //Console.WriteLine(instanceVariable); 
+            Console.WriteLine(classVariable);
+        }
 
+        public static int Abs(int input)
+        {
+            if(input < 0)
+            {
+                return -input;
+            }
+            else
+            {
+                return input;
+            }
         }
     }
 }
