@@ -109,17 +109,20 @@ namespace CSClass
 
             //spanner : 속성을 일컫는다.
             //네모난 상자 : 필드를 일컫는다.
-/*            for (int i = 0; i < students.Count; i++)
-            {
-                if (students[i].grade > 2)
-                {
-                    students.RemoveAt(i);   //김지호에서 grade가 연속적으로 나와 3이 출력되게 된다. (index에 의해) -> 이를 해결하기 위해 뒤에서부터 반복문 실행
-                    //students.Remove(students[i]);
-                    i--;
-                }
-            }
-*/
-            for(int i = students.Count - 1; i >= 0; i--)
+            /*            for (int i = 0; i < students.Count; i++)
+                        {
+                            if (students[i].grade > 2)
+                            {
+                                students.RemoveAt(i);   //김지호에서 grade가 연속적으로 나와 3이 출력되게 된다. (index에 의해) -> 이를 해결하기 위해 뒤에서부터 반복문 실행
+                                //students.Remove(students[i]);
+                                i--;
+                            }
+                        }
+            */
+
+            Console.WriteLine("==============================================");
+
+            for (int i = students.Count - 1; i >= 0; i--)
             {
                 if (students[i].grade > 2)
                 {
@@ -131,6 +134,9 @@ namespace CSClass
             {
                 Console.WriteLine(item);
             }
+
+
+            Console.WriteLine("==============================================");
 
             Method method = new Method();
             Console.WriteLine("곱하기 : " + method.Multi(52.1, 273));
@@ -152,6 +158,9 @@ namespace CSClass
             //long
             Console.WriteLine(MyMath.Abs(987654321123456));
             Console.WriteLine(MyMath.Abs(987654321123456));
+
+
+            Console.WriteLine("==============================================");
 
             Product product1 = new Product("고구마", 3000);
             Product product2 = new Product("감자", 5000);
@@ -175,6 +184,9 @@ namespace CSClass
             Console.WriteLine(Sample.value);
             Console.WriteLine("세번째 위치");
 
+
+            Console.WriteLine("==============================================");
+
             Box1 box1 = new Box1(10, 10);
             box1.width = -10;
             
@@ -188,6 +200,12 @@ namespace CSClass
             box.Width = -10;
             Console.WriteLine("box의 면적은 " + box.Area + "입니다.");
 
+            Console.WriteLine("==============================================");
+
+            Console.WriteLine(Fibonacci.Get(1));
+            Console.WriteLine(Fibonacci.Get(10));
+            Console.WriteLine(Fibonacci.Get(100));
+            Console.WriteLine(Fibonacci.Get(1000));
         }
     }
 }
