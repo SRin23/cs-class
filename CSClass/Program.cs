@@ -175,6 +175,18 @@ namespace CSClass
             Console.WriteLine(Sample.value);
             Console.WriteLine("세번째 위치");
 
+            Box1 box1 = new Box1(10, 10);
+            box1.width = -10;
+            
+            Console.WriteLine("box1의 면적은 " + box1.Area() + "입니다.");
+
+            Box2 box2 = new Box2(10, 10);
+            box2.setWidth(-10);
+            Console.WriteLine("box2의 면적은 " + box2.Area() + "입니다.");
+
+            Box box = new Box(10, 10);
+            box.Width = -10;
+            Console.WriteLine("box의 면적은 " + box.Area + "입니다.");
 
         }
     }
