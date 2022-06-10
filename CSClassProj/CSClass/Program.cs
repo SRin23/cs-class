@@ -207,23 +207,22 @@ namespace CSClass
             Console.WriteLine(Fibonacci.Get(100));
             Console.WriteLine(Fibonacci.Get(1000));
 
-            List<Dog> Dogs = new List<Dog>() { new Dog(), new Dog(), new Dog() };
-            List<Cat> Cats = new List<Cat>() { new Cat(), new Cat(), new Cat() };
+            // List<Dog> Dogs = new List<Dog>() { new Dog(), new Dog(), new Dog() };
+            // List<Cat> Cats = new List<Cat>() { new Cat(), new Cat(), new Cat() };
 
-            foreach(var item in Dogs)
+            List<Animal> animals = new List<Animal>()
+            {
+                new Dog(), new Dog(), new Dog(),
+                new Cat(), new Cat(), new Cat()
+            };
+
+            foreach(var item in animals)
             {
                 item.Eat();
                 item.Sleep();
-                item.Bark();
+                //item.Bark();  //부모클래스에서는 자식클래스의 메서드를 호출할 수 없다.
+                //((Dog)item).Bark(); //형변환 -> Cat에서 문제가 생김
             }
-
-            foreach (var item in Cats)
-            {
-                item.Eat();
-                item.Sleep();
-                item.Meow();
-            }
-
         }
     }
 }
