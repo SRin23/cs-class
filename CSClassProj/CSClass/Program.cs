@@ -222,6 +222,17 @@ namespace CSClass
                 item.Sleep();
                 //item.Bark();  //부모클래스에서는 자식클래스의 메서드를 호출할 수 없다.
                 //((Dog)item).Bark(); //형변환 -> Cat에서 문제가 생김
+
+                if(item is Dog)
+                {
+                    //animal은 bark가 없으므로 에러뜸
+                    //item.Bark();
+                    ((Dog)item).Bark();
+                }else if(item is Cat)
+                {
+                    Cat cat = (Cat)item; 
+                    cat.Meow();
+                }
             }
         }
     }
