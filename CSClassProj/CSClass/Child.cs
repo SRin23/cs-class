@@ -8,7 +8,7 @@ namespace CSClass
 
         public new void Method()
         {
-            Console.WriteLine("자식의 메서드")
+            Console.WriteLine("자식의 메서드");
         }
         public Child() : base()
         {
