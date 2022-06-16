@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace CSClass
 {
-    internal class Program
+    public class Program
     {
+        public static int number;
         static void Main(string[] args)
         {
             Car car = new Car();
@@ -244,6 +245,18 @@ namespace CSClass
             child.CountParent();
             Console.WriteLine("p counter : " + Parent.counter + " / c counter : " + Child.counter);
 
+            Console.WriteLine("==============================================");
+            //섀도잉
+            int number = 20;
+            Console.WriteLine(number);
+
+            //하이딩
+            Child c = new Child();
+            Console.WriteLine(child.variable);
+            Console.WriteLine(((Parent)child).variable);
+
+            c.Method();
+            ((Parent)c).Method();
         }
     }
 }
