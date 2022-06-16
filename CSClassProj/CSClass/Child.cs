@@ -11,6 +11,7 @@ namespace CSClass
             Console.WriteLine("자식의 메서드");
         }
 
+        // public sealed override void Method2()
         public override void Method2()
         {
             Console.WriteLine("자식의 메서드2");
@@ -37,5 +38,12 @@ namespace CSClass
         {
             Child.counter++;    //부모클래스에 있는 counter를 1씩 증가시킴
         }
+
+
+        /*public override void Method3()
+        {
+            Console.WriteLine("추상 메서드 구현");
+        }*/
+
     }
 }
