@@ -257,6 +257,16 @@ namespace CSClass
 
             c.Method();
             ((Parent)c).Method();
+
+            c.Method2();
+            ((Parent)c).Method2();
+
+            Console.WriteLine("==============================================");
+
+            foreach(var item in animals)
+            {
+                item.Eat();
+            }
         }
     }
 }

@@ -6,9 +6,9 @@ namespace CSClass
     {
         public string Color { get; set; }
 
-        public void Eat()
+        public override void Eat()
         {
-            Console.WriteLine("아이 맛있어^^");
+            Console.WriteLine("강아지가 사료를 먹습니다.");
         }
 
         public void Bark()

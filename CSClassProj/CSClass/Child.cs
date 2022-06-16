@@ -10,6 +10,13 @@ namespace CSClass
         {
             Console.WriteLine("자식의 메서드");
         }
+
+        public override void Method2()
+        {
+            Console.WriteLine("자식의 메서드2");
+        }
+
+
         public Child() : base()
         {
             Console.WriteLine("자식 생성자");

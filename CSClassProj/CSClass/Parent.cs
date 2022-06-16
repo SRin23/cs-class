@@ -12,6 +12,12 @@ namespace CSClass
             Console.WriteLine("부모의 메서드");
         }
 
+        //오버라이딩을 허용하겠다
+        public virtual void Method2()
+        {
+            Console.WriteLine("부모의 메서드2");
+        }
+
         public void CountParent()
         {
             Parent.counter++;
